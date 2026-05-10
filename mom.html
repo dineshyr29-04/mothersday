@@ -328,6 +328,51 @@
     /* RESPONSIVE */
 
     @media(max-width: 900px) {
+      section {
+        min-height: auto;
+        padding: 70px 20px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero p,
+      .story-content p,
+      .timeline-card p,
+      .letter-box p {
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 280px;
+      }
+
+      .timeline-card:hover,
+      .gallery img:hover,
+      .story-img img:hover,
+      .hero-btn:hover {
+        transform: none;
+      }
+
+      .hero::before {
+        width: 350px;
+        height: 350px;
+      }
+
+      .timeline::before {
+        left: 20px;
+      }
       .timeline::before {
         left: 20px;
       }
@@ -404,7 +449,7 @@
 
   <section>
     <div class="gallery-title">
-      <h2>Our Beautiful Journey</h2>
+      <h2>The Taste Of Home I Miss Every Day</h2>
     </div>
 
     <div class="timeline">
@@ -412,10 +457,9 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <h3>Childhood Memories</h3>
+          <h3>Your Cooking Still Feels Like Home</h3>
           <p>
-            Every bedtime story, every school morning,
-            every little smile — those moments became my happiest memories.
+            Amma Yuvarani, even though I stay in hostel now, every meal reminds me of your food. No restaurant, no canteen food, and no outside place can ever replace the taste made with your love.
           </p>
         </div>
       </div>
@@ -423,10 +467,9 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <h3>Your Sacrifices</h3>
+          <h3>The Hostel Feels Empty Without You</h3>
           <p>
-            You gave your time, energy, and dreams just to make mine brighter.
-            I notice it more every single day.
+            Sometimes at night in my hostel room, I suddenly miss your voice, your care, and all the little moments at home that I never fully appreciated before.
           </p>
         </div>
       </div>
@@ -434,10 +477,9 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <h3>Your Strength</h3>
+          <h3>Even When We Fight</h3>
           <p>
-            Even in difficult times, you smiled and stayed strong.
-            You taught me courage without ever saying a word.
+            Sometimes when you scold me, I react without thinking. I argue, I get angry, and I act stubborn. But later, when I sit quietly alone, I always realize one thing — nobody loves me like you do.
           </p>
         </div>
       </div>
@@ -445,10 +487,9 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
-          <h3>Forever Grateful</h3>
+          <h3>You Will Always Be My Safe Place</h3>
           <p>
-            No gift can ever match what you have given me.
-            But I hope this reminds you how deeply loved you are.
+            No matter how old I grow, no matter where life takes me, my heart will always find peace with you. You are my first comfort and forever home.
           </p>
         </div>
       </div>
@@ -471,31 +512,99 @@
     </div>
   </section>
 
+  <!-- MEMORIES SECTION -->
+
+  <section>
+    <div class="gallery-title">
+      <h2>Little Things I’ll Never Forget</h2>
+    </div>
+
+    <div class="story-grid">
+      <div class="story-content">
+        <p>
+          The way you waited for me after school.
+          The way you remembered every small thing.
+          The way your smile made every bad day disappear.
+        </p>
+
+        <p>
+          Some heroes wear capes.
+          Mine made dinner, cared silently, and loved endlessly.
+        </p>
+      </div>
+
+      <div class="story-img">
+        <img src="https://images.unsplash.com/photo-1513279922550-250c2129b13a?q=80&w=1200&auto=format&fit=crop" alt="memory">
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTES SECTION -->
+
+  <section>
+    <div class="gallery-title">
+      <h2>Things I Never Say Enough</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>“Amma, I miss you more than I show.”</h3>
+          <p>Hostel life taught me how much your presence mattered in every small part of my day.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>“Your food carried your love.”</h3>
+          <p>Every meal you made had comfort, care, and happiness hidden inside it.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>“Even after arguments...”</h3>
+          <p>My heart always comes back to you because you are the person I love the most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- LETTER -->
 
   <section class="letter">
     <div class="letter-box">
-      <h2>A Letter For You ❤️</h2>
+      <h2>To My Amma, Yuvarani ❤️</h2>
 
       <p>
-        Mom, thank you for being my safe place in every storm.
-        Thank you for believing in me when I doubted myself.
-        Thank you for every sleepless night, every silent prayer,
-        and every moment you chose me before yourself.
+        Amma, sometimes I don’t express things properly. Sometimes I answer back. Sometimes I act stubborn. Sometimes we fight.
       </p>
 
       <p>
-        You are not just my mother.
-        You are my inspiration, my comfort, and my forever home.
+        But when I stay alone in my hostel room, I think about you more than anyone else. I miss hearing you call my name. I miss your cooking. I miss sitting beside you without even talking.
       </p>
 
       <p>
-        I may not always say it enough,
-        but I love you more than words can explain.
+        Life outside home made me understand your value even more. The love you gave me every day was so natural that I never realized how special it truly was.
+      </p>
+
+      <p>
+        You stayed strong even when you were tired. You cared for me even when nobody cared for you. You always chose my happiness first.
+      </p>
+
+      <p>
+        Amma Yuvarani, thank you for being my biggest blessing. No matter how much I grow, I will always remain the child who needs your love.
+      </p>
+
+      <p>
+        If I could choose a thousand times, I would still choose you as my mother in every lifetime.
       </p>
 
       <div class="signature">
-        — Your Loving Child
+        — Your Loving Son ❤️
       </div>
     </div>
   </section>
@@ -539,7 +648,47 @@
       el.style.opacity = 0;
       observer.observe(el);
     });
-  </script>
+  
+    // Mouse Glow Effect
+    const glow = document.createElement('div');
+    glow.style.position = 'fixed';
+    glow.style.width = '300px';
+    glow.style.height = '300px';
+    glow.style.borderRadius = '50%';
+    glow.style.pointerEvents = 'none';
+    glow.style.background = 'radial-gradient(circle, rgba(255,182,193,0.25), transparent 70%)';
+    glow.style.zIndex = '9999';
+    glow.style.transform = 'translate(-50%, -50%)';
+    document.body.appendChild(glow);
 
+    document.addEventListener('mousemove', (e) => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    // Optimized Mobile Friendly Parallax
+    window.addEventListener('scroll', () => {
+      if(window.innerWidth < 768) return;
+
+      const scrollY = window.scrollY;
+
+      document.querySelectorAll('.story-img img').forEach((img, index) => {
+        img.style.transform = `translateY(${scrollY * 0.012 * (index + 1)}px)`;
+      });
+    });
+
+    // Typing Hero Animation
+    const heroText = document.querySelector('.hero h1');
+    const originalText = heroText.innerHTML;
+    heroText.innerHTML = '';
+
+    let i = 0;
+    const typing = setInterval(() => {
+      heroText.innerHTML += originalText.charAt(i);
+      i++;
+      if(i >= originalText.length) clearInterval(typing);
+    }, 50);
+
+  </script>
 </body>
 </html>
