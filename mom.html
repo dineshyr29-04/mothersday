@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Mom ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --pink: #ffd9e6;
+      --rose: #ff7ea8;
+      --cream: #fff8f3;
+      --gold: #f8d58c;
+      --dark: #1e1e1e;
+      --soft: #6d6d6d;
+      --glass: rgba(255,255,255,0.18);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 192, 203, 0.4), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(255, 230, 180, 0.35), transparent 30%),
+        linear-gradient(180deg, #fff7fa 0%, #fffaf4 100%);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 8%;
+      position: relative;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+
+    .floating-heart {
+      position: absolute;
+      font-size: 24px;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.3;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-25px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* HERO */
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(255,126,168,0.25), transparent 70%);
+      filter: blur(80px);
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 8vw, 8rem);
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.2rem;
+      color: var(--soft);
+      line-height: 1.8;
+    }
+
+    .hero-btn {
+      margin-top: 40px;
+      padding: 18px 40px;
+      border-radius: 100px;
+      border: none;
+      background: linear-gradient(135deg, #ff8fb4, #ffc0d5);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.4s;
+      box-shadow: 0 15px 40px rgba(255,126,168,0.35);
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-5px) scale(1.03);
+    }
+
+    /* STORY */
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 50px;
+      align-items: center;
+    }
+
+    .story-img {
+      position: relative;
+    }
+
+    .story-img img {
+      width: 100%;
+      border-radius: 30px;
+      object-fit: cover;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+      transition: 0.5s;
+    }
+
+    .story-img img:hover {
+      transform: scale(1.03);
+    }
+
+    .story-content h2 {
+      font-size: clamp(3rem, 5vw, 5rem);
+      margin-bottom: 20px;
+    }
+
+    .story-content p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--soft);
+      margin-bottom: 25px;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+      padding-top: 80px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #ffb0c8, #ffdca6);
+      transform: translateX(-50%);
+      border-radius: 100px;
+    }
+
+    .timeline-item {
+      width: 50%;
+      padding: 40px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-card {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 15px 60px rgba(0,0,0,0.08);
+      transition: 0.4s;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .timeline-card h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline-card p {
+      color: var(--soft);
+      line-height: 1.8;
+    }
+
+    .timeline-dot {
+      width: 20px;
+      height: 20px;
+      background: white;
+      border: 5px solid #ff9fc0;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px;
+      right: -10px;
+      z-index: 2;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -10px;
+    }
+
+    /* GALLERY */
+
+    .gallery-title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .gallery-title h2 {
+      font-size: clamp(3rem, 5vw, 5rem);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 25px;
+      transition: 0.5s;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    }
+
+    .gallery img:hover {
+      transform: translateY(-10px) scale(1.03);
+    }
+
+    /* LETTER */
+
+    .letter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .letter-box {
+      max-width: 900px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(20px);
+      border-radius: 40px;
+      padding: 70px;
+      box-shadow: 0 20px 70px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .letter-box h2 {
+      font-size: clamp(3rem, 5vw, 5rem);
+      margin-bottom: 30px;
+    }
+
+    .letter-box p {
+      line-height: 2;
+      color: var(--soft);
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+    }
+
+    .signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: #ff7ea8;
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--soft);
+      font-size: 0.95rem;
+    }
+
+    /* PARALLAX HEARTS */
+
+    .heart-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    .heart {
+      position: absolute;
+      color: rgba(255,126,168,0.15);
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(100vh) rotate(0deg);
+      }
+      to {
+        transform: translateY(-120vh) rotate(360deg);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 900px) {
+      .timeline::before {
+        left: 20px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even),
+      .timeline-item:nth-child(odd) {
+        width: 100%;
+        left: 0;
+        text-align: left;
+        padding-left: 60px;
+      }
+
+      .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot {
+        left: 10px;
+      }
+
+      .letter-box {
+        padding: 40px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart-bg" id="heartBg"></div>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="floating-heart" style="top:10%; left:15%;">❤️</div>
+    <div class="floating-heart" style="top:25%; right:20%; animation-delay:2s;">💖</div>
+    <div class="floating-heart" style="bottom:15%; left:20%; animation-delay:1s;">✨</div>
+
+    <h1>Happy<br>Mother's Day</h1>
+
+    <p>
+      To the most beautiful soul in my life — thank you for every sacrifice,
+      every hug, every smile, and every moment of unconditional love.
+      This little website is a journey through memories, love, and gratitude.
+    </p>
+
+    <button class="hero-btn" onclick="document.querySelector('.story').scrollIntoView()">
+      Begin The Journey ✨
+    </button>
+  </section>
+
+  <!-- STORY -->
+
+  <section class="story">
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop" alt="Mom Image">
+      </div>
+
+      <div class="story-content">
+        <h2>My First Hero</h2>
+        <p>
+          From my very first step to every dream I chase today,
+          you have always been beside me. Your love became my strength,
+          your voice became my confidence, and your care became my home.
+        </p>
+
+        <p>
+          No matter how much life changes,
+          one thing remains constant — your endless love.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+
+  <section>
+    <div class="gallery-title">
+      <h2>Our Beautiful Journey</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>Childhood Memories</h3>
+          <p>
+            Every bedtime story, every school morning,
+            every little smile — those moments became my happiest memories.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>Your Sacrifices</h3>
+          <p>
+            You gave your time, energy, and dreams just to make mine brighter.
+            I notice it more every single day.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>Your Strength</h3>
+          <p>
+            Even in difficult times, you smiled and stayed strong.
+            You taught me courage without ever saying a word.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <h3>Forever Grateful</h3>
+          <p>
+            No gift can ever match what you have given me.
+            But I hope this reminds you how deeply loved you are.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+
+  <section>
+    <div class="gallery-title">
+      <h2>Moments Filled With Love</h2>
+    </div>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop">
+      <img src="https://images.unsplash.com/photo-1516589091380-5d8e87df6999?q=80&w=1200&auto=format&fit=crop">
+    </div>
+  </section>
+
+  <!-- LETTER -->
+
+  <section class="letter">
+    <div class="letter-box">
+      <h2>A Letter For You ❤️</h2>
+
+      <p>
+        Mom, thank you for being my safe place in every storm.
+        Thank you for believing in me when I doubted myself.
+        Thank you for every sleepless night, every silent prayer,
+        and every moment you chose me before yourself.
+      </p>
+
+      <p>
+        You are not just my mother.
+        You are my inspiration, my comfort, and my forever home.
+      </p>
+
+      <p>
+        I may not always say it enough,
+        but I love you more than words can explain.
+      </p>
+
+      <div class="signature">
+        — Your Loving Child
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Made with endless love for the world's best mom ❤️
+  </footer>
+
+  <script>
+    const heartBg = document.getElementById('heartBg');
+
+    for(let i = 0; i < 35; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = ['❤️','💖','✨','💕'][Math.floor(Math.random() * 4)];
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (Math.random() * 25 + 15) + 'px';
+      heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      heart.style.animationDelay = Math.random() * 5 + 's';
+
+      heartBg.appendChild(heart);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.animate([
+            { opacity: 0, transform: 'translateY(80px)' },
+            { opacity: 1, transform: 'translateY(0px)' }
+          ], {
+            duration: 1000,
+            fill: 'forwards',
+            easing: 'ease'
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll('section, .timeline-card, .gallery img').forEach(el => {
+      el.style.opacity = 0;
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
