@@ -722,6 +722,47 @@
       i++;
     }, 50);
 
+    // Typing Letter Animation
+    const letterBox = document.querySelector('.letter-box');
+    const letterHTML = letterBox.innerHTML;
+    
+    // Set min height to avoid layout jump
+    letterBox.style.minHeight = letterBox.offsetHeight + 'px';
+    letterBox.innerHTML = '';
+
+    let letterTyped = false;
+    const letterObserver = new IntersectionObserver((entries) => {
+      if(entries[0].isIntersecting && !letterTyped) {
+        letterTyped = true;
+        
+        let j = 0;
+        let isTagL = false;
+        let currentLetterHTML = "";
+        
+        const typeLetter = setInterval(() => {
+          if(j >= letterHTML.length) {
+            clearInterval(typeLetter);
+            letterBox.style.minHeight = 'auto';
+            return;
+          }
+          
+          let char = letterHTML.charAt(j);
+          currentLetterHTML += char;
+          
+          if(char === '<') isTagL = true;
+          if(char === '>') isTagL = false;
+          
+          if(!isTagL) {
+            letterBox.innerHTML = currentLetterHTML;
+          }
+          
+          j++;
+        }, 10); // 10ms for fast typing since it's a long letter
+      }
+    }, { threshold: 0.3 });
+    
+    letterObserver.observe(document.querySelector('.letter'));
+
   </script>
 </body>
 </html>
